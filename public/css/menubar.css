@@ -1,0 +1,92 @@
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+
+           /* .links > a {
+                color: #636b6f;
+                padding: 0 25px;
+                font-size: 12px;
+                font-weight: 600;
+                letter-spacing: .1rem;
+                text-decoration: none;
+                text-transform: uppercase;
+            }*/
+            {box-sizing: border-box}
+
+            body {font-family: Verdana, sans-serif; margin:0}
+            .mySlides {display: none}
+            img {vertical-align: middle;}
+
+            /* Slideshow container */
+            .slideshow-container {
+              max-width: 1000px;
+              position: relative;
+              margin: auto;
+            }
+            .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 30%;
+              padding: 16px;
+              color: white;
+              font-weight: bold;
+              font-size: 22px;
+              transition: 0.6s ease;
+              border-radius: 0 3px 3px 0;
+            }
+
+            .next {
+              right: 0;
+              border-radius: 3px 0 0 3px;
+            }
+
+            .fade {
+              -webkit-animation-name: fade;
+              -webkit-animation-duration: 1.5s;
+              animation-name: fade;
+              animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+
+            @keyframes fade {
+              from {opacity: .4} 
+              to {opacity: 1}
+            }
+            /* On hover, add a black background color with a little bit see-through */
+            a.prev:hover, a.next:hover {
+              background-color: #a5a7a987;
+              text-decoration: none;
+            }
+
+            .slideImages{
+              width:100%;
+              height: 525px;
+            }

@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Pathway+Gothic+One|Open+Sans:400,700);
+
+$font-stack: 14px/14px Helvetica, sans-serif;
+$primary-color: #FF6699;
+$base-color: #bbb;
+$break-large: 800px;
+$break-medium: 640px;
+$break-small: 480px;
+
+body {
+  background: #6699CC;
+  padding-top: 20px;
+}
+
+// Progress Tracker
+.track-progress {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  background: white;
+  height: 80px;
+  border-radius: 10px;
+  @include box-shadow(0 4px 6px -5px black);
+  
+  li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    font: $font-stack;
+    text-transform: uppercase;
+    text-align: center;
+    color: $base-color;
+    border-bottom: 4px $base-color solid;
+    line-height: 3em;
+    width: 25%;
+    float: left;
+    
+    &:after {
+      content: "\00a0\00a0"; 
+      /*non-breaking space */
+    }
+    
+    &:before {
+      position: relative;
+      bottom: -2.5em;
+      float: left;
+      left: 50%;
+      line-height: 1em;
+    }
+    
+    @media (max-width:$break-large){
+	    font-size: 0.7em;
+    }
+    
+    span {
+      padding-left: 0.75em;
+      @media (max-width:$break-medium){
+        display: none;
+      }
+    }
+  }
+  
+  li.done {
+    color: $base-color;
+    font-weight: bold;
+    border-bottom: 4px $primary-color solid;
+    
+    &:before {
+      content: "";
+      background: $primary-color;
+      height: 1.2em;
+      width: 1.2em;
+      line-height: 1.2em;
+      border: none;
+      border-radius: 1.2em;
+    }
+  }
+  
+  li.todo:before {
+    content: "";
+    background: white;
+    border: 0.25em solid $base-color;
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 0.8em;
+  }
+  
+  em {
+    display: none;
+    font-weight: 700;
+    padding-left: 0.75em;
+    
+    @media (max-width:$break-medium){
+      display: inline;
+    }
+  }
+}
+
+// Words and Stuff
+p {
+  margin: 0 auto;
+  max-width: 500px;
+  width: 75%;
+  margin-top: 25px;
+  font: 18px/28px 'Open Sans',sans-serif;
+  color: #eee;
+  
+  em {
+    display: block;
+    font-size: 23px;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+  }
+}
